@@ -1,0 +1,11 @@
+{
+  "name": "github_search",
+  "version": "1.0.0",
+  "description": "github search using github api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LeafKn",
+  "license": "ISC"
+}
