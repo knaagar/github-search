@@ -16,3 +16,4 @@ app.get('/', (req, res) => {
 })
 // https://api.github.com/users/knaagar
 // https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6
+// using localstorage to show recent search
