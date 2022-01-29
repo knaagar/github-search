@@ -14,3 +14,5 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/public/views/index.html')
 })
+// https://api.github.com/users/knaagar
+// https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6
