@@ -17,11 +17,22 @@ function getDataAndShow() {
         .then(response => response.json())
         .then(data => {
             let loop = data.items.length <= 15 ? data.items.length : 15
+            
             spinner.setAttribute('hidden', '')
+            
+            // const githubCards = output.getElementsByClassName("github-card");
+            // for(let i = 0; i < githubCards.length; i++) {
+            //     output.removeChild(githubCards[i]);
+            // }
+
+            output.querySelectorAll(".aclassname").forEach(v => v.parentElement.removeChild(v));
+
             for(let i = 0; i < loop; i++){
                 const el = document.createElement("div")
+                el.classList.add("github-card")
                 fetch("https://api.github.com/users/" + data.items[i].login, {}).then(response => response.json())
                 .then(d => {
+                    
                     el.innerHTML = `
                     <br>
                     <div class="card">
@@ -74,10 +85,8 @@ function getDataAndShow() {
                 `
                 })
                 output.appendChild(el)
-                console.log('Success: ', data.items[i].login)
-                if(output.innerHTML !== ''){
-                    // output.innerHTML = ''
-                }
+                console.log(output.innerHTML)
+                
             }
         })
         .catch((error) => {
