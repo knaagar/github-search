@@ -16,7 +16,7 @@ function getDataAndShow() {
     })
         .then(response => response.json())
         .then(data => {
-            let loop = data.items.length <= 15 ? data.items.length : 15
+            let loop = data.items.length //<= 15 ? data.items.length : 15
             
             spinner.setAttribute('hidden', '')
             
@@ -25,7 +25,7 @@ function getDataAndShow() {
             //     output.removeChild(githubCards[i]);
             // }
 
-            output.querySelectorAll(".aclassname").forEach(v => v.parentElement.removeChild(v));
+            output.querySelectorAll(".github-card").forEach(v => v.parentElement.removeChild(v));
 
             for(let i = 0; i < loop; i++){
                 const el = document.createElement("div")
