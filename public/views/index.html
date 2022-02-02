@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\styles\style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
-<body>
-    <h1>Github Search</h1>
-    <p>A minimal project just to brush up my skills ;)</p>
-
+<body class="dark">
+    <div class="center">
+        <div class="top">
+            <h1>gitsearch</h1>
+            <button id="toggle" onclick="colorScheme()"><h4 id="icon">Light <i class="fas fa-sun"></i></h4></button>
+        </div>
+        <div class="input">
+            <input type="text" name="data" id="mainInp" placeholder="&#xf002; Search stuff in your head.."><button onclick="getDataAndShow()">Search</button>
+        </div>
+        <div id="output" class="output">
+            <div hidden id="spinner"></div>
+        </div>
+        <br><br><br>
+    </div>
+<script src="\scripts\script.js"></script>
 </body>
 </html>

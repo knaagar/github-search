@@ -1,1 +1,348 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Open+Sans&display=swap");
+body.dark, body.light {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.dark {
+  background-color: #141c2f;
+  color: #fff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body.dark #toggle {
+  outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body.dark ::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.dark :-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.dark ::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.dark ::placeholder {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light {
+  background-color: #f5f8ff;
+  color: #000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body.light #toggle {
+  outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body.light .input input {
+  background-color: #e6e9f8;
+  color: #000;
+}
+
+body.light ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light :-ms-input-placeholder {
+  color: #000;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light ::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light ::placeholder {
+  color: #000;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light .card {
+  background-color: #e6e9f8;
+  color: #000;
+}
+
+body.light .card a {
+  color: #141c2f;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body.light .card .color-container {
+  background-color: #ffffff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.top {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  max-width: 60vw;
+}
+
+.top h1 {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 1.4em;
+  float: left;
+}
+
+.top button {
+  float: right;
+}
+
+.top h4 {
+  letter-spacing: 2px;
+}
+
+.input {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input input {
+  width: 70%;
+  height: 33px;
+  outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
+  background-color: #1f2a48;
+  color: #fff;
+  padding: 10px;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.input button {
+  width: 30%;
+  outline: none;
+  border: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 10px;
+  background-color: #1582fc;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-weight: bold;
+}
+
+.card {
+  height: auto;
+  border-radius: 10px;
+  background-color: #1f2a48;
+  color: #fff;
+  padding: 10px;
+  font-family: "Noto Sans Mono", monospace;
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-width: 58.4vw;
+}
+
+.card img:not(#stats) {
+  border-radius: 50%;
+}
+
+.card a {
+  text-decoration: none;
+  border-bottom: 1px solid #017cfe;
+  color: #f5f8ff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.card .int {
+  font-size: 1.5em;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-container section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-container .col-2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.flex-container .color-container {
+  background-color: #141c2f;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.flex-container .stuff {
+  padding: 10px;
+}
+
+@media (max-width: 700px) {
+  .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.getCenter {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.getCenter img:not(#stats) {
+  padding: 10px;
+  width: 70%;
+}
+
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 5px solid #ffffff;
+  border-top: 5px solid #1582fc;
+  margin-top: 10em;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

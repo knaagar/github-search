@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Open+Sans&display=swap');
+// color-scheme
+
+// dark
+$f1: #141c2f;
+$f2: #1f2a48;
+$f3: #141c2f;
+$f4: #1582fc;
+
+// light
+$light-f1: #f5f8ff;
+$light-f2: #017cfe;
+$light-f3: #e6e9f8;
+$light-f4: #ffffff;
+
+// fonts in use
+$font1: 'Noto Sans Mono', monospace;
+$font2: 'Open Sans', sans-serif;
+
+@mixin button($border, $r1, $r2, $r3, $r4, $bg, $col, $padding) {
+    outline: none;
+    border: $border;
+    border-top-left-radius: $r1;
+    border-top-right-radius: $r2;
+    border-bottom-left-radius: $r3;
+    border-bottom-right-radius: $r4;
+    background-color: $bg;
+    color: $col;
+    cursor: pointer;
+    padding: $padding;
+    font-family: $font1;
+    transition: all 1s;
+}
+
+@mixin input($border, $r1, $r2, $r3, $r4, $bg, $col, $padding) {
+    outline: none;
+    border: $border;
+    border-top-left-radius: $r1;
+    border-top-right-radius: $r2;
+    border-bottom-left-radius: $r3;
+    border-bottom-right-radius: $r4;
+    background-color: $bg;
+    color: $col;
+    padding: $padding;
+    font-family: $font1;
+    transition: all 1s;
+}
+
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark {
+    background-color: $f1;
+    // padding: 100px;
+    @extend %center;
+    color: #fff;
+    #toggle {
+        @include button(none, 10px, 10px, 10px, 10px, transparent, #fff, 10px);
+    }
+    transition: all 1s;
+    ::placeholder {
+        color: #fff;
+        opacity: 0.8;
+        font-weight: bold;
+        font-family: $font1;
+        transition: 1s;
+    }
+}
+
+body.light {
+    background-color: $light-f1;
+    @extend %center;
+    color: #000;
+    #toggle {
+        @include button(none, 10px, 10px, 10px, 10px, transparent, #000, 10px);
+    }
+    transition: all 1s;
+    .input {
+        input {
+            background-color: $light-f3;
+            color: #000
+        }
+    }
+    ::placeholder {
+        color: #000;
+        opacity: 0.8;
+        font-weight: bold;
+        font-family: $font1;
+        transition: 1s;
+    }
+    .card {
+        background-color: $light-f3;
+        color: #000;
+        a {
+            color: #141c2f;
+            transition: 1s;
+        }
+        .color-container {
+            background-color: $light-f4;
+            transition: 1s;
+        }
+    }    
+}
+
+.top {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    max-width: 60vw;
+    h1 {
+        font-family: $font1;
+        font-size: 1.4em;
+        float: left;
+    }
+    button {
+        float: right;
+    }
+    h4 {
+        letter-spacing: 2px;
+    }
+}
+.input {
+    width: 60vw;
+    display: flex;
+    input {
+        width: 70%;
+        height: 33px;
+        @include input(none, 10px, 0px, 10px, 0px, $f2, #fff, 10px);
+    }
+    button {
+        width: 30%;
+        @include button(none, 0px, 10px, 0px, 10px, $f4, #fff, 10px);
+        font-weight: bold;
+    }
+}
+
+.card {
+    height: auto;
+    border-radius: 10px;
+    background-color: #1f2a48;
+    color: #fff;
+    padding: 10px;
+    font-family: "Noto Sans Mono", monospace;
+    transition: 1s;
+    max-width: 58.4vw;
+    img:not(#stats) {
+        border-radius: 50%;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid $light-f2;
+        color: $light-f1;
+        transition: 1s;
+    }
+    .int {
+        font-size: 1.5em;
+    }
+}
+
+.flex-container {
+    display: flex;
+    section {
+        flex: 1;
+    }
+    .col-2 {
+        flex: 2;
+    }
+    .color-container {
+        background-color: $f1;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .stuff {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+.getCenter {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    img:not(#stats) {
+        padding: 10px;
+        width: 70%;
+    }
+}
+
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 5px solid $light-f4;
+    border-top: 5px solid $f4;
+    margin-top: 10em;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear;
+}
+  
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

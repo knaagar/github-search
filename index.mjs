@@ -17,10 +17,17 @@ app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/public/views/index.html')
 })
 
-const response = await fetch('https://api.github.com/users/knaagar')
-const data = await response.json()
+// todo - low
+// separate profile things with either detailed display or repo display
+// depending on choice and query from form
+// app.get(':user', (req, res) => {
+//     res.sendFile(process.cwd() + '')
+// })
 
-console.log(data)
+// const response = await fetch('https://api.github.com/users/knaagar')
+// const data = await response.json()
+
+// console.log(data)
 // https://api.github.com/users/knaagar
 // https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6
 // using localstorage to show recent search
