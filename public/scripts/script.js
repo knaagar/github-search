@@ -34,8 +34,8 @@ function getDataAndShow() {
                     </section>
                     <section class="col-2">
                         <h1>${data.items[i].login}</h1>
-                        <h5><a href="https://github.com/${data.items[i].login}">${d.name}</a></h5>
-                        <h5><span class="border">Bio: </span>${d.bio}</h5>
+                        <h5><a href="https://github.com/${data.items[i].login}">${d.name !== null ? d.name : '<span class="red">404</span>'}</a></h5>
+                        <h5><span class="border">Bio: </span>${d.bio !== null ? d.bio : '<span class="red">404 Bio Not Found</span>'}</h5>
                         <br>
                         <div class="flex-container color-container">
                             <section class="col-1">
@@ -54,12 +54,12 @@ function getDataAndShow() {
                         <br>
                         <div class="color-container">
                             <div class="flex-container">
-                                <section class="col-1 stuff"><i class="fas fa-map-marker-alt"></i> ${d.location}</section>
-                                <section class="col-1 stuff"><i class="fas fa-envelope"></i> <a href="${d.email}">Mail</a></section>
+                                <section class="col-1 stuff"><i class="fas fa-map-marker-alt"></i> ${d.location !== null ? d.location : '<span class="red">404</span>'}</section>
+                                <section class="col-1 stuff"><i class="fas fa-envelope"></i> ${d.email !== null ? '<a href="mailto:${d.email}">Mail</a>' : '<span class="red">404</span>'}</section>
                             </div>
                             <div class="flex-container">
-                                <section class="col-1 stuff"><i class="fas fa-link"></i> <a href="${d.blog}">Website</a></section>
-                                <section class="col-1 stuff"><i class="fas fa-building"></i> ${d.company}</section>
+                                <section class="col-1 stuff"><i class="fas fa-link"></i> <a href="${d.blog}">${d.blog !== null ? 'Website' : '<span class="red">404</span>'}</a></section>
+                                <section class="col-1 stuff"><i class="fas fa-building"></i> ${d.company !== null ? d.company : '<span class="red">404</span>'}</section>
                             </div>
                         </div>
                         <br>

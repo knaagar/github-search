@@ -241,6 +241,10 @@ body.light .card .color-container {
   font-size: 1.5em;
 }
 
+.card .red {
+  color: red !important;
+}
+
 .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,6 +267,8 @@ body.light .card .color-container {
   background-color: #141c2f;
   padding: 15px;
   border-radius: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .flex-container .stuff {
