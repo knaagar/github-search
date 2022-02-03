@@ -2,4 +2,4 @@
 
 A minimal project to brush up my frontend and javascript skills
 
-Usage link be out soon..
+## https://github-search.leafkn.repl.co/
