@@ -69,7 +69,7 @@ function getDataAndShow() {
                                 <section class="col-1 stuff"><i class="fas fa-envelope"></i> ${d.email !== null ? '<a href="mailto:${d.email}">Mail</a>' : '<span class="red">404</span>'}</section>
                             </div>
                             <div class="flex-container">
-                                <section class="col-1 stuff"><i class="fas fa-link"></i> <a href="${d.blog}">${d.blog !== null ? 'Website' : '<span class="red">404</span>'}</a></section>
+                                <section class="col-1 stuff"><i class="fas fa-link"></i> <a href="${d.blog.substring(0, 8) === 'https://' || d.blog.substring(0, 7) === 'http://' ? '' : 'https://'}${d.blog}">${d.blog !== null ? 'Website' : '<span class="red">404</span>'}</a></section>
                                 <section class="col-1 stuff"><i class="fas fa-building"></i> ${d.company !== null ? d.company : '<span class="red">404</span>'}</section>
                             </div>
                         </div>
