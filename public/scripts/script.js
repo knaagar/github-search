@@ -16,6 +16,7 @@ function getDataAndShow() {
     })
         .then(response => response.json())
         .then(data => {
+            if(data.items.length !== 0 && input !== ''){
             let loop = data.items.length //<= 15 ? data.items.length : 15
             
             spinner.setAttribute('hidden', '')
@@ -85,11 +86,40 @@ function getDataAndShow() {
                 `
                 })
                 output.appendChild(el)
-                console.log(output.innerHTML)
                 
             }
+        }
+        else {
+            spinner.setAttribute('hidden', '')
+            
+            const el = document.createElement("div")
+            el.classList.add("github-card")
+            output.querySelectorAll(".github-card").forEach(v => v.parentElement.removeChild(v));
+            el.innerHTML = `
+            <br>
+            <div class="getCenter">
+                <img src="/media/gh404.png" alt="pfp">
+            </div>
+            <h1 style="font-family: 'Noto Sans Mono', monospace; text-align: center;">404 User(s) Not Found</h1>
+            <br>
+            `
+            output.appendChild(el)
+        }
         })
         .catch((error) => {
-            console.error('Error: ', error);
+            spinner.setAttribute('hidden', '')
+            
+            const el = document.createElement("div")
+            el.classList.add("github-card")
+            output.querySelectorAll(".github-card").forEach(v => v.parentElement.removeChild(v));
+            el.innerHTML = `
+            <br>
+            <div class="getCenter">
+                <img src="/media/gh404.png" alt="pfp">
+            </div>
+            <h1 style="font-family: 'Noto Sans Mono', monospace; text-align: center;">Sadly, Some error has popped up :(</h1>
+            <br>
+            `
+            output.appendChild(el)
         });
 }
