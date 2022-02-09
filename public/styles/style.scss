@@ -91,6 +91,9 @@ body.light {
         font-family: $font1;
         transition: 1s;
     }
+    .good-links {
+        color: #141c2f;
+    }
     .card {
         background-color: $light-f3;
         color: #000;
@@ -120,6 +123,12 @@ body.light {
     h4 {
         letter-spacing: 2px;
     }
+}
+.good-links {
+    text-decoration: none;
+    border-bottom: 1px solid $light-f2;
+    color: $light-f1;
+    transition: 1s;
 }
 .input {
     width: 60vw;
