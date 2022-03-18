@@ -123,3 +123,11 @@ function getDataAndShow() {
             output.appendChild(el)
         });
 }
+
+
+document.getElementById('mainInp').addEventListener('keyup', (event) => {
+    if(event.keyCode === 13) {
+        event.preventDefault()
+        document.getElementById("mainBtn").click()
+    }
+})
