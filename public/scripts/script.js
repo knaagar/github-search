@@ -5,11 +5,18 @@ function colorScheme() {
     icon.innerHTML === 'Light <i class="fas fa-sun"></i>' ? icon.innerHTML = 'Dark <i class="fas fa-moon"></i>' : icon.innerHTML = 'Light <i class="fas fa-sun"></i>';
 }
 
+function searchify(value) {
+    document.getElementById("mainInp").value = value
+    document.getElementById("mainBtn").click()
+}
+
 function getDataAndShow() {
     const input = document.getElementById("mainInp").value
     const output = document.getElementById("output")
     const spinner = document.getElementById("spinner")
     spinner.removeAttribute('hidden')
+    localStorage.setItem("recent", input);
+    document.getElementById("recent").innerHTML = `Recent Search: <span class="good-links">${localStorage.getItem('recent')}</span>`
     
     fetch("https://api.github.com/search/users?q=" + input.trim().replace(/ /gi, ""), {
 

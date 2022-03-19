@@ -363,4 +363,12 @@ body.light .card .color-container {
             transform: rotate(360deg);
   }
 }
+
+span#recent {
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+span#recent .good-links {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

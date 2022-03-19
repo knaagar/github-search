@@ -19,6 +19,9 @@
         <div class="input">
             <input type="text" name="data" id="mainInp" placeholder="&#xf002; Search stuff in your head.."><button id="mainBtn" onclick="getDataAndShow()">Search</button>
         </div>
+        <br>
+        <span id="recent" onclick="javascript:searchify(localStorage.getItem('recent'))"></span>
+        <br>
         <div id="output" class="output">
             <div hidden id="spinner"></div>
         </div>

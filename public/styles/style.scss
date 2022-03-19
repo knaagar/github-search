@@ -237,3 +237,10 @@ body.light {
       transform: rotate(360deg);
     }
 }
+
+span#recent {
+    font-family: 'Noto Sans Mono', monospace;
+    .good-links {
+        cursor: pointer;
+    }
+}
