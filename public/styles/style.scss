@@ -47,14 +47,13 @@ $font2: 'Open Sans', sans-serif;
 }
 
 %center {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 }
 
 body.dark {
     background-color: $f1;
-    // padding: 100px;
     @extend %center;
     color: #fff;
     #toggle {
@@ -111,7 +110,7 @@ body.light {
 .top {
     margin-top: 70px;
     margin-bottom: 70px;
-    max-width: 60vw;
+    max-width: 80vw;
     h1 {
         font-family: $font1;
         font-size: 1.4em;
@@ -131,15 +130,15 @@ body.light {
     transition: 1s;
 }
 .input {
-    width: 60vw;
+    width: 80vw;
     display: flex;
     input {
-        width: 70%;
+        width: 80%;
         height: 33px;
         @include input(none, 10px, 0px, 10px, 0px, $f2, #fff, 10px);
     }
     button {
-        width: 30%;
+        width: 20%;
         @include button(none, 0px, 10px, 0px, 10px, $f4, #fff, 10px);
         font-weight: bold;
     }
@@ -153,7 +152,7 @@ body.light {
     padding: 10px;
     font-family: "Noto Sans Mono", monospace;
     transition: 1s;
-    max-width: 58.4vw;
+    max-width: 80vw;
     img:not(#stats) {
         border-radius: 50%;
     }
@@ -204,6 +203,9 @@ body.light {
         padding: 10px;
         width: 70%;
     }
+    #stats {
+        width: 80%;
+    }    
 }
 
 #spinner:not([hidden]) {
