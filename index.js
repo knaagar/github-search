@@ -14,7 +14,3 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/public/views/index.html')
 })
-
-// const response = await fetch('https://api.github.com/users/knaagar')
-// const data = await response.json()
-// using localstorage to show recent search
